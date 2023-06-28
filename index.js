@@ -4,10 +4,10 @@ const contacts = require("./contacts");
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
-    case "read":
+    case "list":
       const allContacts = await contacts.listContacts();
       return console.log(allContacts);
-    case "getById":
+    case "get":
       const oneContact = await contacts.getContactById(id);
       return console.log(oneContact);
     case "add":
@@ -17,12 +17,12 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       const removeContact = await contacts.removeContact(id);
       return console.log(removeContact);
     default:
-      console.log("Unknown action");
+      console.log("Unknown action type");
   }
 };
 
-// invokeAction({ action: "read" });
-// invokeAction({ action: "getById", id: "AeHIrLTr6JkxGE6SN-0Rw" });
+// invokeAction({ action: "list" });
+// invokeAction({ action: "get", id: "AeHIrLTr6JkxGE6SN-0Rw" });
 // invokeAction({
 //   action: "add",
 //   name: "Jack Manson",
