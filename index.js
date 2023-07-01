@@ -31,13 +31,3 @@ program.parse();
 
 const options = program.opts();
 invokeAction(options);
-
-// invokeAction({ action: "list" });
-// invokeAction({ action: "get", id: "AeHIrLTr6JkxGE6SN-0Rw" });
-// invokeAction({
-//   action: "add",
-//   name: "Jack Manson",
-//   email: "mansonj@gmail.com",
-//   phone: "(974) 635-2937",
-// });
-// invokeAction({ action: "remove", id: "8zhkewJf_o4O7pkJ93ITl" });
